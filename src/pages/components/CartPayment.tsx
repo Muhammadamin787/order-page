@@ -11,6 +11,7 @@ import {useProductPrice} from "../../context/PriceProvider.tsx";
 // @ts-expect-error
 import {usePaymentInputs} from "react-payment-inputs"
 import CartPaymentFooter from "./CartPaymentFotoer.tsx";
+import {removeSpaces} from "../../utils/helpers.ts";
 
 const defaultValues: ICardInfo = {
     cvc: "",
@@ -41,8 +42,10 @@ const CartPayment = () => {
         event.preventDefault();
 
         const order: IOrder = {
-            ...cardInfo,
             cardType,
+            ...cardInfo,
+            expiryDate: removeSpaces(cardInfo.expiryDate),
+            cardNumber: removeSpaces(cardInfo.cardNumber),
             products: products?.map(product => ({
                 productId: product.id,
                 price: product.price,

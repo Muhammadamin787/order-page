@@ -9,3 +9,5 @@ export const formatCurrency = (amount: number) => {
 };
 
 export const calcPrices = (acc: number, product: IProduct) => acc + (product.price * product.amount)
+
+export const removeSpaces = (str: string) => str.split(" ").join("")
