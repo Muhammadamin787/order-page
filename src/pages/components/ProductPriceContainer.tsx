@@ -13,7 +13,7 @@ const ProductPriceContainer = ({product}: Props) => {
     const {increaseAmount, decreaseAmount, deleteProduct} = useProductPrice()
 
     return (
-        <div className="flex w-[216px] text-[#393939] items-center">
+        <div className="flex w-[136px] sm:w-[216px] text-[#393939] items-center">
             <div className="actiond flex items-center gap-1.5 w-20">
                 <div className="text-[22px] font-semibold select-none">{product.amount}</div>
                 <div className="flex flex-col gap-2">
@@ -26,7 +26,7 @@ const ProductPriceContainer = ({product}: Props) => {
             <div className="text-sm font-medium flex-grow text-center">
                 {formatCurrency(product.price * product.amount)}
             </div>
-            <div className="mr-[23px]">
+            <div className="ml-2 sm:ml-0 sm:mr-[15px] md:mr-[23px]">
                 <button onClick={() => deleteProduct(product.id)}>
                     <IconTrash/>
                 </button>
