@@ -9,7 +9,7 @@ const CartProducts = () => {
     const products = useLiveQuery(() => db.products.toArray());
 
     return (
-        <div className="flex-grow ">
+        <div className="flex-grow w-full">
             <div
                 className="text-lg font-semibold border-b-2 border-[#D0CFCF] pb-[22px] flex">
                 <button className="-ml-2">
