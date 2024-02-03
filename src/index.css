@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .primary-input {
+        @apply mt-1 bg-[#6268C6] text-[#C4C4C4] h-10 w-full rounded-md px-[18px];
+    }
+}
